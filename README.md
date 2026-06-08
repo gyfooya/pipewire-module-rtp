@@ -8,4 +8,3 @@ UDP network audio stream
 - ✔ Works with any app (system-wide)
 - ✔ No DAW dependency
 - ✔ Can be routed like virtual cables
-
