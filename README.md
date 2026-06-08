@@ -1,14 +1,11 @@
 # pipewire-module-rtp
 UDP network audio stream
 
-sudo pacman -S pipewire wireplumber pipewire-pulse pavucontrol
-systemctl --user status or enable --now pipewire pipewire-pulse wireplumber
-pactl info (pipewire as server is fine)
+# What this gives you
 
+- ✔ UDP audio streaming
+- ✔ LAN real-time audio
+- ✔ Works with any app (system-wide)
+- ✔ No DAW dependency
+- ✔ Can be routed like virtual cables
 
-behind the scene without script :
-# Sender setup (PC A → sends audio)
-- pw-cli load-module libpipewire-module-rtp-sink
-
-# Receiver setup (PC B ← receives audio)
-- pw-cli load-module libpipewire-module-rtp-source
