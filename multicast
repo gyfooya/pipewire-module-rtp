@@ -1,0 +1,44 @@
+Optionnal Setup :
+
+MULTICAST (true multi-room broadcast)
+
+-----------------------------------
+# On SOURCE - Use multicast IP:
+
+destination.ip = "239.255.0.1"
+destination.port = 5004
+-----------------------------------
+
+-----------------------------------
+On ALL receivers
+Same config on every room:
+local.port = 5004
+And ensure all machines listen to multicast group 239.255.0.1.
+-----------------------------------
+
+-----------------------------------
+Router must allow multicast forwarding (many home routers do, some don’t)
+
+On Linux routers or main gateway:
+sudo sysctl -w net.ipv4.icmp_echo_ignore_broadcasts=0
+-----------------------------------
+
+-----------------------------------
+Improving sync (practical tricks)
+1. Use wired Ethernet everywhere (remember -> Wi-Fi = jitter = drift)
+2. Same clock rate everywhere (rate = 48000)
+3. Reduce buffer size (default.clock.quantum = 64 or 128 if unstable)
+4. Use QPWGRAPH for audio routing
+-----------------------------------
+
+-----------------------------------
+Better UX: “zones”
+
+You can define:
+Living room = receiver 1
+Kitchen = receiver 2
+Bedroom = receiver 3
+
+Then you simply:
+enable/disable RTP sinks per zone
+enable/disable RTP sinks per zone
