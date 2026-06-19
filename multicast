@@ -3,10 +3,15 @@ Optionnal Setup :
 MULTICAST (true multi-room broadcast)
 
 -----------------------------------
-# On SOURCE - Use multicast IP:
+# On SOURCE - Use multicast IPv4:
 
 destination.ip = "239.255.0.1"
 destination.port = 5004
+
+# or use multicast IPv6:
+ff02::... = link-local (same L2 segment only)
+ff05::... = site-local
+ff0e::... = global
 -----------------------------------
 
 -----------------------------------
